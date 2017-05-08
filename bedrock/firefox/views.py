@@ -495,6 +495,12 @@ def new(request):
                 template = 'firefox/new/break-free/scene2.html'
             elif experience == 'wayofthefox':
                 template = 'firefox/new/way-of-the-fox/scene2.html'
+            elif experience == 'privatenotoption':
+                template = 'firefox/new/fx-lifestyle/private-not-option/scene2.html'
+            elif experience == 'conformitynotdefault':
+                template = 'firefox/new/fx-lifestyle/conformity-not-default/scene2.html'
+            elif experience == 'browseuptoyou':
+                template = 'firefox/new/fx-lifestyle/browse-up-to-you/scene2.html'
             else:
                 template = 'firefox/new/scene2.html'
         else:

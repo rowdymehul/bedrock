@@ -1354,6 +1354,12 @@ PIPELINE_JS = {
         ),
         'output_filename': 'js/firefox_new_scene1_way_of_the_fox-bundle.js',
     },
+    'firefox_new_scene1_fx_lifestyle': {
+        'source_filenames': (
+            'js/firefox/new/fx-lifestyle.js',
+        ),
+        'output_filename': 'js/firefox_new_scene1_fx_lifestyle-bundle.js',
+    },
     'firefox_new_pixel': {
         'source_filenames': (
             'js/base/mozilla-pixel.js',
