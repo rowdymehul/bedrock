@@ -2,24 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import '../../sandstone/lib.less';
+@import '../../../sandstone/lib.less';
 
 @blue: #0a99d5;
 @grey: #EFEFEF;
-
-// generates a < tablet media query for all sections (except intro)
-.common-mobile-props(@padding: 250px) {
-    @media only screen and (max-width: @breakTablet) {
-        background-position: bottom 20px center;
-        min-height: 0;
-        padding-bottom: @padding;
-
-        .copy {
-            float: none;
-            width: auto;
-        }
-    }
-}
 
 #outer-wrapper {
     background: @grey;
@@ -58,11 +44,11 @@
     .content {
         background-position: bottom center;
         text-align: right;
-        color: white;
+        color: #fff;
     }
 
     h2 {
-        color: white;
+        color: #fff;
     }
 
     p {
@@ -70,25 +56,6 @@
         line-height: 38px;
         margin-bottom: 50px;
     }
-}
-
-#tabzilla:before {
-    background-color: @blue;
-}
-
-#newsletter-form {
-    display: none;
-}
-
-.fxfamilynav-header {
-    // Safari 5.1+, Chrome 10+
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        -webkit-linear-gradient(@blue, @blue);
-    background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        -o-linear-gradient(@blue, @blue);
-    // the standard
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        linear-gradient(@blue, @blue);
 }
 
 .content-section {
@@ -187,7 +154,7 @@ h3 {
 
     @media only screen and (max-width: @breakMobileLandscape) {
         width: auto;
-        padding: 0 0;
+        padding: 0;
 
         p {
             .font-size(14px);
@@ -196,13 +163,23 @@ h3 {
     }
 }
 
-.fx-privacy-link {
+.copy .fx-privacy-link {
     a:active,
     a:focus,
     a:hover,
     a:link,
     a:visited {
         color: #d9d9d9;
+    }
+}
+
+#today .fx-privacy-link {
+    a:active,
+    a:focus,
+    a:hover,
+    a:link,
+    a:visited {
+        color: inherit;
     }
 }
 
@@ -217,10 +194,16 @@ h3 {
         float: right;
     }
 
-    @media only screen and (max-width: @breakTablet) {
+    @media only screen and (max-width: @breakDesktop) {
         h3,
         .download-button {
             float: none;
+            text-align: center;
+        }
+
+        .download-button {
+            display: block;
+            margin: 0 auto;
         }
     }
 }
@@ -242,7 +225,7 @@ h3 {
     text-align: left;
 
     li {
-        margin: 0 0;
+        margin: 0;
     }
 
     p {
@@ -257,10 +240,10 @@ h3 {
 #content-2 {
     padding-left: 35px;
     padding-right: 35px;
-    margin: 0 0;
+    margin: 0;
 
     @media only screen and (max-width: @breakDesktop) {
-        padding: 0 0;
+        padding: 0;
     }
 }
 
@@ -269,7 +252,7 @@ h3 {
     padding: 0 30px;
 
     @media only screen and (max-width: @breakMobileLandscape) {
-        padding: 0 0;
+        padding: 0;
     }
 }
 
