@@ -20,16 +20,17 @@
 <section class="content-section" id="intro">
   <div class="content">
     <div class="copy">
-      <img src="{{ static('/media/img/firefox/new/firefox-logo.png') }}" />
+      <img src="{{ static('img/firefox/new/firefox-logo.png') }}" />
       {% block head_content %}
       {% endblock %}
 
       <div id="download-button-wrapper-scene1">
-        {{ download_firefox(dom_id="download-firefox") }}
+        {{ download_firefox( locale_in_transition=true, dom_id="download-firefox") }}
       </div>
 
+      {# this button is used only for scene 2's #}
       <div class="download-button-wrapper desktop" id="download-button-wrapper-desktop">
-        {{ download_firefox(force_direct=true, dom_id='primary-download-button') }}
+        {{ download_firefox(force_direct=true, locale_in_transition=true, dom_id='primary-download-button') }}
       </div>
     </div>
   </div>
@@ -61,7 +62,7 @@
     <div id="download-contain">
       <h3>{% block footer_cta %}{% endblock %}</h3>
 
-      {{ download_firefox(dom_id="download-firefox-today") }}
+      {{ download_firefox( locale_in_transition=true, dom_id="download-firefox-today") }}
     </div>
   </div>
 </section>

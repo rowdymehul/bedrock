@@ -4,20 +4,17 @@
 
 @import '../../../sandstone/lib.less';
 
-@blue: #0a99d5;
-@grey: #EFEFEF;
-
 #outer-wrapper {
-    background: @grey;
+    background: #efefef;
 }
 
 #wrapper {
     background: #fff;
     width: auto;
 
-    // add icon to download buttons *not* in family nav
+    // add icon to download buttons
     .download-button .download-title:after {
-        background: url('/media/img/firefox/family/index-b/download-arrow.svg') center right no-repeat;
+        background: url('/media/img/firefox/new/fx-lifestyle/download-arrow.svg') center right no-repeat;
         content: '';
         display: inline-block;
         height: 20px;
@@ -80,8 +77,14 @@
 }
 
 // hide primary CTA when on scene 2
-.fx-lifestyle-scene2 #download-button-wrapper-scene1 {
-    display: none;
+.fx-lifestyle-scene2 {
+    #wrapper {
+        padding-bottom: 0;
+    }
+
+    #download-button-wrapper-scene1 {
+        display: none;
+    }
 }
 
 .content-section {
@@ -101,7 +104,7 @@
     width: @widthDesktop - 20px;
 
     a {
-        color: @blue;
+        color: #0a99d5;
         font-weight: bold;
     }
 

@@ -6,13 +6,18 @@
 
 #intro {
     background-image: url('/media/img/firefox/new/fx-lifestyle/private-not-option/intro-high-res.jpg');
-
     background-position: right top;
     background-repeat: no-repeat;
 
     @media only screen and (max-width: @breakDesktop) {
+        background-position: center top;
+
         p {
             .font-size(22px);
+
+            br {
+                display: none;
+            }
         }
     }
 
@@ -21,10 +26,6 @@
             .font-size(18px);
             line-height: 1.6;
             margin-bottom: 40px;
-
-            br {
-                display: none;
-            }
         }
 
         .content {
